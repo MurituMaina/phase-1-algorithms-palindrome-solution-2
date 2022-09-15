@@ -1,5 +1,9 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  const symbols = /[^a-zA-Z0-9]/g;
+  const lowerCase = word.toLowerCase().replace(symbols,'');
+  const stringReverse = lowerCase.split('').reverse().join('');
+  return lowerCase === stringReverse;
 }
 
 /* 
