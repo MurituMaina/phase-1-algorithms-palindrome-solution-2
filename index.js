@@ -1,25 +1,24 @@
 function isPalindrome(word) {
   // Write your algorithm here
-  const symbols = /[^a-zA-Z0-9]/g;
-  // .replace(symbols,'')
-  const lowerCase = word.toLowerCase();
-  const stringReverse = lowerCase.split('').reverse().join('');
-  return lowerCase === stringReverse;
+
+  for (let i = 0; i < word.length / 2; i++) {
+   return word[word.length-1-i] === word[i]
+  }
+
 }
 
 /* 
   Add your pseudocode here
-  Get the string reversed 
-  check if the values match in reverse order by strict 
-  comparison
-
+ iterate over the word and get value of index i
+ compare the value of index i (at begining or 0 and increase to the centre)
+compared with the value of letter at index of whole word-1-i
+which is the index of the current letter.
 */
 
 /*
   Add written explanation of your solution here
-  we get the string convert it to lowercase
-  split it up and reverse the order of the letters of the string
-  compare the lowercased string with the reversed string. 
+ get the value at index i and compare it with the value at index i from the end 
+ by getting the subtraction of the length -1 and the value of i.
 */
 
 // You can run `node index.js` to view these console logs
